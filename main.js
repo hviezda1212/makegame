@@ -16,15 +16,15 @@ userInput.addEventListener("focus", focusInput);
 
 function pickRandomNumber() {
   // 랜덤숫자 뽑기
-  computerNumber = Math.floor(Math.random() * 100) + 1;
+  computerNumber = Math.floor(Math.random() * 10) + 1;
   console.log("정답", computerNumber);
 }
 
 function play() {
   // 숫자 추측하기
   const userValue = userInput.value;
-  if (userValue < 1 || userValue > 100) {
-    resultText.textContent = "1부터 100 사이의 숫자를 입력 해주세요";
+  if (userValue < 1 || userValue > 10) {
+    resultText.textContent = "1부터 10 사이의 숫자를 입력 해주세요";
 
     return;
   }
